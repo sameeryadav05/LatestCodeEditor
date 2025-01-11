@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.7.1/dist/jszip.min.js"></script>
+    <script src="https://kit.fontawesome.com/47f08f919b.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bodyp" class="bimg">
+    <div id="editor">
+
+        <header class="heading">
+            <div class="buttons">
+                <button id="html-btn" class="htmlglow">HTML&nbsp;&nbsp;&nbsp;<i class="fa-brands fa-html5"
+                        id="one"></i></button>
+                <button id="css-btn" class="cssglow">CSS&nbsp;&nbsp;&nbsp;<i class="fa-brands fa-css3-alt"
+                        id="two"></i></button>
+                <button id="js-btn" class="jsglow">JS&nbsp;&nbsp;&nbsp;<i class="fa-brands fa-square-js"
+                        id="three"></i></button>
+
+            </div>
+            <button class="note">Note</button>
+            <button id="save">Save</button>
+            <button class="btn-play" id="btn">Play</button>
+            <!-- <form>
+            <input type="text" id="ProjectName" class="dis" placeholder="Project Name" required>
+            <input type="submit" value="OK" id="ok" class="dis">
+         </form> -->
+
+
+            <!-- <button class="save">Save <i class="fa-solid fa-angle-down"></i></button> -->
+
+        </header>
+        <div class="container">
+            <!-- <video autoplay loop muted plays-inline class="back">
+            <source src="video.mp4" type="video/mp4">
+        </video> -->
+            <div class="left-panel">
+                <textarea id="HTML" class="html" class="html-area" onkeyup="run()"></textarea>
+
+
+                <textarea id="CSS" class="css" class="css-area" onkeyup="run()"></textarea>
+
+                <textarea id="JS" class="js" class="js-area" onkeyup="run()"></textarea>
+
+            </div>
+            <div class="right-panel">
+                <label><i class="fa-solid fa-play"></i>&nbsp;output</label>
+                <iframe id="output"></iframe>
+            </div>
+
+        </div>
+    </div>
+    <!-- edits -->
+
+    <div class="notecontainer" class="dis">
+
+        <span id="cross" class="dis"><i class="fa-solid fa-x"></i></span>
+        <h1> <img src="notes.png">Notes</h1>
+        <button class="CreateBtn"><img src="edit.png">Create Notes</button>
+        <div class="notes-container"></div>
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
